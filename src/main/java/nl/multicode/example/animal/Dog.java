@@ -9,7 +9,7 @@ public class Dog {
 
     public Dog(Sound sound) {
 
-        this.sound = new DogSound();
+        this.sound = sound;
     }
 
     public String getSound() {
