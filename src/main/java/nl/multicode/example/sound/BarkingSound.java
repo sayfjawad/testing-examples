@@ -1,10 +1,10 @@
 package nl.multicode.example.sound;
 
-public class DogSound implements Sound {
+public class BarkingSound implements Sound {
 
     @Override
     public String makeSound() {
 
-        return "'Barking'";
+        return "'barking'";
     }
 }
