@@ -14,6 +14,7 @@ public class SpecialDaysRepository {
 
     public SpecialDaysRepository() {
 
+        // Add special days to repository
         // New years
         addSpecialDay(2024, 12, 31, 9, 0, 16, 0);
         // Valentine
@@ -22,7 +23,9 @@ public class SpecialDaysRepository {
         addSpecialDay(2024, 3, 31, 9, 0, 16, 0);
         // Kings day
         addSpecialDay(2024, 4, 27, 9, 0, 16, 0);
-        // Second Xmas day
+        // Second Xmas 1st day (closed)
+        addSpecialDay(LocalDate.of(2024, 12, 25), OpeningHours.builder().build());
+        // Second Xmas 2nd day
         addSpecialDay(2024, 12, 26, 10, 0, 16, 0);
     }
 
@@ -38,11 +41,8 @@ public class SpecialDaysRepository {
                 OpeningHoursCreator.create(year, month, dayOfMonth, openingHour, openingMinute, closingHour, closingMinute));
     }
 
-
     public void addSpecialDay(LocalDate date, OpeningHours hours) {
 
         specialDays.put(date, hours);
     }
-
-
 }
